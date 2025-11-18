@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
+         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>Hospital Management System</display-name>
+    <description>A comprehensive hospital management platform</description>
+
+    <!-- Welcome File List -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Session Configuration -->
+    <session-config>
+        <!-- Session timeout in minutes (20 min recommended for security) -->
+        <session-timeout>20</session-timeout>
+        <!-- Cookie configuration for security -->
+        <cookie-config>
+            <!-- Prevent JavaScript access to session cookie -->
+            <http-only>true</http-only>
+            <!-- Only send cookie over HTTPS in production -->
+            <!-- <secure>true</secure> -->
+            <!-- Set cookie name -->
+            <name>HOSPITAL_SESSIONID</name>
+        </cookie-config>
+        <!-- Session tracking mode -->
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+
+    <!-- Error Pages -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error-404.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error-500.jsp</location>
+    </error-page>
+
+    <!-- Security Constraints (Optional - uncomment if needed) -->
+    <!--
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Patient Area</web-resource-name>
+            <url-pattern>/patient/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>patient</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Doctor Area</web-resource-name>
+            <url-pattern>/doctor/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>doctor</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Admin Area</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    -->
+</web-app>

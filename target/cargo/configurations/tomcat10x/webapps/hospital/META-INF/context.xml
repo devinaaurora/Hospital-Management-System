@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- PostgreSQL DataSource Configuration -->
+    <Resource name="jdbc/HospitalDB"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="10000"
+              username="postgres"
+              password="postgres"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/hospital_db"/>
+</Context>
