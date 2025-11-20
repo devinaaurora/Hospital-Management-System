@@ -84,21 +84,7 @@
                 </p>
             </div>
 
-            <!-- Demo Accounts Info -->
-            <div class="mt-8 border-t pt-6">
-                <p class="text-center text-gray-600 text-sm mb-4">Demo Accounts:</p>
-                <div class="text-xs text-gray-600 space-y-2">
-                    <div class="bg-gray-50 p-2 rounded">
-                        <strong>Admin:</strong> admin / password123
-                    </div>
-                    <div class="bg-gray-50 p-2 rounded">
-                        <strong>Doctor:</strong> dr.smith / password123
-                    </div>
-                    <div class="bg-gray-50 p-2 rounded">
-                        <strong>Patient:</strong> patient1 / password123
-                    </div>
-                </div>
-            </div>
+            <!-- Demo account credentials removed for security -->
         </div>
 
         <!-- Back to Home -->
